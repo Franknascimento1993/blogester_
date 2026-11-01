@@ -1,19 +1,19 @@
 ---
-import { SITE_TITLE, SITE_AUTHOR } from '../consts';
+import { SITE_TITLE } from '../consts';
 const year = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
   <div class="inner">
-    <p>&copy; {year} {SITE_TITLE}. Todos os direitos reservados.</p>
-    <p class="muted">Feito com Astro · Nicho e branding em definição</p>
+    <p class="copy">&copy; {year} {SITE_TITLE}</p>
+    <p class="note">Nicho e branding em definição</p>
   </div>
 </footer>
 
 <style>
   .site-footer {
     border-top: 1px solid var(--color-border);
-    margin-top: 3rem;
+    margin-top: auto;
     padding: 2rem 1.25rem;
   }
 
@@ -21,15 +21,20 @@ const year = new Date().getFullYear();
     max-width: var(--max-width);
     margin: 0 auto;
     text-align: center;
-    font-size: 0.875rem;
   }
 
-  .muted {
-    color: var(--color-muted);
-    margin-top: 0.35rem;
-  }
-
-  p {
+  .copy {
     margin: 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: var(--color-text);
+  }
+
+  .note {
+    margin: 0.35rem 0 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-muted);
   }
 </style>

@@ -4,24 +4,88 @@ import { SITE_AUTHOR } from '../consts';
 ---
 
 <BaseLayout title="Sobre" description="Sobre o blog e o autor.">
-  <h1>Sobre</h1>
-  <div class="prose">
+  <header class="page-header">
+    <p class="section-label">Informação</p>
+    <h1>Sobre</h1>
+  </header>
+
+  <div class="card info-card">
     <p>
       Este espaço ainda está em construção. O <strong>nicho</strong> e a
       <strong>identidade da marca</strong> serão definidos em breve.
     </p>
     <p>
-      Por enquanto, a estrutura técnica está pronta: posts em Markdown/MDX,
+      A estrutura técnica está pronta: posts em Markdown/MDX,
       layout responsivo, SEO básico, RSS e sitemap.
     </p>
-    <p>
-      Autor: <strong>{SITE_AUTHOR}</strong>
-    </p>
+    <hr class="divider" />
+    <dl class="info-list">
+      <div>
+        <dt>Autor</dt>
+        <dd>{SITE_AUTHOR}</dd>
+      </div>
+      <div>
+        <dt>Stack</dt>
+        <dd>Astro · Markdown · MDX</dd>
+      </div>
+      <div>
+        <dt>Status</dt>
+        <dd>Estrutura pronta · Branding em aberto</dd>
+      </div>
+    </dl>
   </div>
 </BaseLayout>
 
 <style>
-  h1 {
-    margin-top: 0;
+  .page-header {
+    margin-bottom: 2rem;
+  }
+
+  .page-header h1 {
+    margin: 0;
+  }
+
+  .info-card p {
+    font-weight: 300;
+    color: var(--color-muted);
+    margin-bottom: 1rem;
+  }
+
+  .info-card p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .info-card strong {
+    color: var(--color-text);
+    font-weight: 500;
+  }
+
+  .info-list {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .info-list div {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 1rem;
+    align-items: baseline;
+  }
+
+  .info-list dt {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin: 0;
+  }
+
+  .info-list dd {
+    margin: 0;
+    font-weight: 400;
+    color: var(--color-text);
   }
 </style>
