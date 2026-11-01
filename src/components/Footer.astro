@@ -1,0 +1,35 @@
+---
+import { SITE_TITLE, SITE_AUTHOR } from '../consts';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="inner">
+    <p>&copy; {year} {SITE_TITLE}. Todos os direitos reservados.</p>
+    <p class="muted">Feito com Astro · Nicho e branding em definição</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: 3rem;
+    padding: 2rem 1.25rem;
+  }
+
+  .inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  .muted {
+    color: var(--color-muted);
+    margin-top: 0.35rem;
+  }
+
+  p {
+    margin: 0;
+  }
+</style>

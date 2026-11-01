@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_AUTHOR } from '../consts';
+---
+
+<BaseLayout title="Sobre" description="Sobre o blog e o autor.">
+  <h1>Sobre</h1>
+  <div class="prose">
+    <p>
+      Este espaço ainda está em construção. O <strong>nicho</strong> e a
+      <strong>identidade da marca</strong> serão definidos em breve.
+    </p>
+    <p>
+      Por enquanto, a estrutura técnica está pronta: posts em Markdown/MDX,
+      layout responsivo, SEO básico, RSS e sitemap.
+    </p>
+    <p>
+      Autor: <strong>{SITE_AUTHOR}</strong>
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  h1 {
+    margin-top: 0;
+  }
+</style>
